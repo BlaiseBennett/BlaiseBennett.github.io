@@ -3,7 +3,8 @@
     <title>JavaScript Clock Project - Blaise Bennett</title>
     <script language="JavaScript">
         function getTime() {
-            clock12.innerHTML = "6:34 pm";
+            var d = new Date();
+            clock12.innerHTML = d.getTime();
             clock24.innerHTML = "18:34";
         }
         window.onload = getTime;
