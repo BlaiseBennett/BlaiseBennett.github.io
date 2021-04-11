@@ -21,16 +21,21 @@
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
         body {
             color: rgb(255,255,255);
-            background: rgb(2,0,36);
+            background: rgb(2,0,36);background: rgb(2,0,36);
+            background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(2,2,182,1) 100%);
             background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(2,2,182,1) 100%);
         }
         .clock {
             font-family: 'Ubuntu Mono', monospace;
+            font-size: 4em;
+            margin: auto;
+            width: 50%;
+            text-align: center;
         }
     </style>    
 </head>
 <body>
-<h1 class="clock" id="clock12">12 hour clock</h1>
-<h1 class="clock" id="clock24">24 hour clock</h1>
+<div class="clock" id="clock12">12 hour clock</div>
+<div class="clock" id="clock24">24 hour clock</div>
 </body>
 </html>
