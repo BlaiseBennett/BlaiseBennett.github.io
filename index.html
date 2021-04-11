@@ -7,7 +7,7 @@
             var currentTime = d.getTime();
             format12(currentTime);
             format24(currentTime);
-
+            setTimeout(getTime, 1000);
         }
         function format12(currentTime) {
             clock12.innerHTML = currentTime;
