@@ -19,10 +19,10 @@
                 hours = currentTime.getHours() - 12;
                 ampm = "pm"
             }
-            clock12.innerHTML = hours + ":" + currentTime.getMinutes() + "." + currentTime.getSeconds() + ampm;
+            clock12.innerHTML = hours + ":" + currentTime.getMinutes() + ":" + currentTime.getSeconds() + " " + ampm;
         }
         function format24(currentTime) {
-            clock24.innerHTML = currentTime.getHours() + "" + currentTime.getMinutes() + "." + currentTime.getSeconds();
+            clock24.innerHTML = currentTime.getHours() + "" + currentTime.getMinutes() + ":" + currentTime.getSeconds();
         }
         window.onload = getTime;
     </script>
