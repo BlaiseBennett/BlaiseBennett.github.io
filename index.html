@@ -4,22 +4,28 @@
     <script language="JavaScript">
         function getTime() {
             var d = new Date();
-            //var currentTime = d.getTime();
             format12(d);
             format24(d);
             setTimeout(getTime, 1000);
         }
         function format12(currentTime) {
-            var hours;
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
             var ampm;
-            if (currentTime.getHours() < 12) {
-                hours = currentTime.getHours();
-                ampm = "am" 
+            if (hours < 12) {
+                ampm = "AM" 
             } else {
-                hours = currentTime.getHours() - 12;
-                ampm = "pm"
+                hours = hours - 12;
+                ampm = "PM"
             }
-            clock12.innerHTML = hours + ":" + currentTime.getMinutes() + ":" + currentTime.getSeconds() + " " + ampm;
+            if (minutes <= 9) {
+                minutes = 0 + "" + minutes
+            }
+            if (seconds <= 9) {
+                seconds = 0 + "" + seconds
+            }
+            clock12.innerHTML = hours + ":" + minutes + ":" + seconds + " " + ampm;
         }
         function format24(currentTime) {
             clock24.innerHTML = currentTime.getHours() + "" + currentTime.getMinutes() + ":" + currentTime.getSeconds();
