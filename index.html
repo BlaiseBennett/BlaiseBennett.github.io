@@ -28,7 +28,15 @@
             clock12.innerHTML = hours + ":" + minutes + ":" + seconds + " " + ampm;
         }
         function format24(currentTime) {
-            clock24.innerHTML = currentTime.getHours() + "" + currentTime.getMinutes() + ":" + currentTime.getSeconds();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+            if (minutes <= 9) {
+                minutes = 0 + "" + minutes
+            }
+            if (seconds <= 9) {
+                seconds = 0 + "" + seconds
+            }
+            clock24.innerHTML = currentTime.getHours() + "" + minutes + ":" + seconds;
         }
         window.onload = getTime;
     </script>
